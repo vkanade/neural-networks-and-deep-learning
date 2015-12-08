@@ -11,7 +11,7 @@ systematic way in the module ``deep_autoencoder``.
 
 # My Libraries
 from backprop2 import Network
-import mnist_loader 
+import mnist_loader
 
 # Third-party libraries
 import matplotlib
@@ -43,7 +43,7 @@ def plot_test_results(net, test_inputs):
     fig = plt.figure()
     ax = fig.add_subplot(111)
     images_in = [test_inputs[j].reshape(-1, 28) for j in range(10)]
-    images_out = [net.feedforward(test_inputs[j]).reshape(-1, 28) 
+    images_out = [net.feedforward(test_inputs[j]).reshape(-1, 28)
                   for j in range(10)]
     image_in = np.concatenate(images_in, axis=1)
     image_out = np.concatenate(images_out, axis=1)
